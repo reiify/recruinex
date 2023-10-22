@@ -4,8 +4,8 @@
   <div class="ms-texts">
       <h2 class="mst-h2">Find&Hire Experts <span>for any job</span></h2>
       <p class="mst-p">We help talents meets opportunity and grow</p>
-    </div>
-    <button class="ms-btn">Contact us</button>
+      <button type="submit" class="ms-btn">Contact us</button>
+  </div>
 
   <img src="../assets/mainScreen.png" alt="people" class="people">
 
@@ -23,6 +23,13 @@ export default {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  gap: 40px;
+}
+
+.ms-texts {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 }
 
 .mst-h2 {
@@ -58,8 +65,9 @@ export default {
 
   /* button */
   display: inline-flex;
+  width: fit-content;
   padding: 0px 54px;
-  margin-top: 30px;
+  margin-top: 10px;
   border-radius: 20px;
   border: 2px solid #FFF;
   background: #F68D2C;
@@ -69,7 +77,20 @@ export default {
 }
 
 .people {
+  width: 100%;
   border-radius: 50px;
   background: #00AFA5;
+}
+
+/* media */
+@media (max-width: 1199.99px) {
+  .main__screen {
+    flex-wrap: wrap;
+    gap: 45px;
+  }
+
+  .ms-texts {
+    gap: 15px;
+  }
 }
 </style>
